@@ -1,22 +1,26 @@
- var user = prompt('What is your name?');
- console.log("user: " + user);
+var user = prompt('What is your name?');
+console.log("user: " + user);
 
-   alert('Hello, ' + user + ' I am going to ask you a few questions so you can get to know me a little better.');
+alert('Hello, ' + user + ' I am going to ask you a few questions so you can get to know me a little better.');
 
- var age = prompt(user + ', do you think I look older than 40 years old?').toLowerCase();
- console.log('users age:' + age);
+function firstQuestion(){
+  do{
+  var age = prompt(user + ', do you think I look older than 40 years old?').toLowerCase();
+  console.log('users age:' + age);
+       if (age === 'yes' || age === 'y') {
+         alert('Gotch ya ' + user + '!  I am 38, almost there.');
+       } else if (age === 'no' || age ===  'n'){
+         alert('Thank you ' + user + ', you nailed it.');
+       } else {
+         alert('That\'s not yes or no.');
+       }
+ }while(age !== 'yes' && age !== 'y' && age !== 'no' && age!== 'n');
+}
 
-     if (age === 'yes') {
-       alert('Gotch ya ' + user + '!  I am 38, almost there.');
-     }
+firstQuestion();
 
-     else {
-       alert('Thank you ' + user + ', you nailed it.');
-     }
-
- var where = prompt(user + ', guess where I am from?');
- console.log('users where:' + where);
-
+var where = prompt(user + ', guess where I am from?');
+console.log('users where:' + where);
     if (where === 'Illinois') {
         alert('Wow ' + user + ' , you nailed that one!');
     }
