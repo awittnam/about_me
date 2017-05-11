@@ -29,18 +29,16 @@ function secondQuestion(){
   }
 }
 
+function thirdQuestion(){
+  var myDog = prompt(user + ', what breed of dog do you think I own?').toLowerCase();
+  console.log('users myDog:' + myDog)
+  if (myDog === 'golden retriever') {
+    alert(user + ', this is getting spooky.  You are amazing.  That is correct.');
+  } else {
+    alert('Negative,' + user + ', Miss Eva is a Golden Retriever.');
+  }
+}
+
 firstQuestion();
 secondQuestion();
-
-/*
- var myDog = prompt(user + ', what breed of dog do you think I own?');
- console.log('users myDog:' + myDog)
-
-     if (myDog === 'Golden Retriever') {
-         alert(user + ', this is getting spooky.  You are amazing.  That is correct.');
-     }
-
-       else {
-         alert('Negative,' + user + ', Miss Eva is a Golden Retriever.');
-       }
-*/
+thirdQuestion();
